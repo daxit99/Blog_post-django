@@ -3,8 +3,11 @@ from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
 from django.contrib.auth.models import User
 from .models import Post
 from django.views.generic import ListView,DetailView,CreateView,UpdateView,DeleteView
+from django.contrib.auth.decorators import login_required
 
 
+
+@login_required()
 def home(request):
     context={
         'posts':Post.objects.all()
@@ -64,5 +67,3 @@ class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
             return True
         return False
 
-def about(request):
-    return render(request,'blog/about.html',{'title':'about'})
