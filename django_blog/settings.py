@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-p#0k7f8jq$f$@rb$s87dl0(&0^+-g)^%k+6!^#a$7gw+5ie7&u
 # SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['daxitblog.herokuapp.com']
 
